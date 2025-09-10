@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/components/hero/Hero";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
@@ -90,6 +91,29 @@ export default function Home() {
                 <h3 className="text-3xl font-bold mb-4 text-gradient">{products.ecosh.title}</h3>
                 <p className="text-lg text-foreground/80 mb-6">{products.ecosh.description}</p>
                 
+                {/* 4 ZERO 기술 섹션 - 설명 바로 아래로 이동 */}
+                <div className="mb-6 p-6 rounded-xl border border-white/10 bg-gradient-to-br from-cyan-500/5 to-blue-500/5">
+                  <div className="text-2xl font-bold text-gradient mb-4">4 ZERO 기술</div>
+                  <div className="grid grid-cols-2 gap-3 text-sm">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">💧</span>
+                      <span>Water Zero</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">🚫</span>
+                      <span>Odor Zero</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">⚡</span>
+                      <span>Energy Zero</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">💰</span>
+                      <span>Cost Zero</span>
+                    </div>
+                  </div>
+                </div>
+                
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   {products.ecosh.models.map((model, i) => (
                     <div key={i} className="p-4 rounded-xl border border-white/10 bg-white/5">
@@ -111,28 +135,15 @@ export default function Home() {
               </div>
               
               <div className="relative">
-                <div className="aspect-square rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl font-bold text-gradient mb-4">4 ZERO</div>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl">💧</span>
-                        <span>Water Zero</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl">🚫</span>
-                        <span>Odor Zero</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl">⚡</span>
-                        <span>Energy Zero</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl">💰</span>
-                        <span>Cost Zero</span>
-                      </div>
-                    </div>
-                  </div>
+                <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-6 overflow-hidden">
+                  <Image
+                    src="/products/ecosh-models.png"
+                    alt="에코쉬 무수소변기 모델 EU-01, EU-04, EU-05"
+                    width={800}
+                    height={400}
+                    className="w-full h-auto object-contain rounded-lg"
+                    priority
+                  />
                 </div>
               </div>
             </div>

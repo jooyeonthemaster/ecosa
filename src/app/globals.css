@@ -71,3 +71,27 @@ input:focus, select:focus, textarea:focus {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 229, 255, 0.15);
 }
+
+/* Infinite scroll animation */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-horizontal {
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+.scroll-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  width: max-content;
+}

@@ -7,6 +7,7 @@ export default function Header() {
   const pathname = usePathname();
   
   const navItems = [
+    { href: "/brand-story", label: "Brand Story" },
     { href: "/company", label: "회사소개" },
     { href: "/products", label: "제품소개" },
     { href: "/innovation", label: "기술혁신" },

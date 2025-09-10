@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import { innovation } from "@/content/site";
@@ -166,6 +167,34 @@ export default function InnovationPage() {
           </div>
         </Reveal>
       </Section>
+
+      {/* 특허 인증 배너 - 무한 스크롤 */}
+      <div className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/15 to-purple-900/20 border-y border-white/10">
+        <Reveal>
+          <h3 className="text-4xl font-bold text-center mb-12">특허 및 인증 포트폴리오</h3>
+        </Reveal>
+        <div className="scroll-container">
+          <div className="scroll-content scroll-horizontal">
+            {/* 이미지를 두 번 반복하여 끊김 없는 무한 스크롤 효과 */}
+            <Image
+              src="/products/certifications-banner.png"
+              alt="에코사 특허 및 인증"
+              width={6000}
+              height={600}
+              className="h-[448px] w-auto object-contain opacity-100"
+              priority
+            />
+            <Image
+              src="/products/certifications-banner.png"
+              alt="에코사 특허 및 인증"
+              width={6000}
+              height={600}
+              className="h-[448px] w-auto object-contain opacity-100"
+              priority
+            />
+          </div>
+        </div>
+      </div>
 
       {/* 인증 현황 */}
       <Section id="certifications" title="인증 현황" subtitle="신뢰할 수 있는 기술력 검증">

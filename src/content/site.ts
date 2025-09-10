@@ -1,6 +1,7 @@
 // Structured content distilled from about.txt to power pages
 
 export const nav = [
+  { href: "/brand-story", label: "Brand Story" },
   { href: "/company", label: "회사소개" },
   { 
     href: "/products", 
@@ -709,10 +710,13 @@ export const company = {
     "KOTITI 항균인증"
   ],
   awards: [
-    { year: 2023, award: "환경부장관 표창" },
-    { year: 2022, award: "중소벤처기업부 장관상" },
-    { year: 2021, award: "대한민국 친환경 대상" },
-    { year: 2020, award: "우수벤처기업상" }
+    { year: 2016, award: "대한민국우수상품 대상 (한국 언론 기자 협회 중앙회)" },
+    { year: 2015, award: "제 4회 대한민국 모범기업인 대상 (국회예산정책처특별위원회)" },
+    { year: 2015, award: "성남창업경영대회 기업부문 최우수상 (성남산업진흥재단)" },
+    { year: 2015, award: "대한민국 문화 경영 대상 (헤럴드 경제)" },
+    { year: 2015, award: "표창장 (국회 환경 노동 위원회)" },
+    { year: 2015, award: "표창장 (광주광역시장)" },
+    { year: 2015, award: "물 관리 녹색 기술상 (한국 환경 산업 기술원)" }
   ]
 };
 
@@ -877,3 +881,28 @@ export const cta = {
     }
   ]
 };
+
+// Flush vs Waterless (항목별 VS 비교)
+export const productsComparison = {
+  title: "수세식과 에코사 무수소변기",
+  left: {
+    name: "수세식 소변기",
+    items: [
+      "파손될 위험성 有",
+      "무거움",
+      "내부면 수직면 — 튐 현상 많음",
+      "하수관 물로 항시 개방 — 악취 역류",
+      "겨울철 동파 가능성 有 (난방비 발생)",
+    ],
+  },
+  right: {
+    name: "에코사 무수소변기",
+    items: [
+      "파손될 위험성 無",
+      "가벼움",
+      "내부면 완만한 곡률형 — 튐 현상 적음",
+      "매직밸브로 하수구 악취 차단",
+      "겨울철 동파 가능성 無 (난방비 X)",
+    ],
+  },
+} as const;

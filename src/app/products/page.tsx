@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
-import { products } from "@/content/site";
-import { Droplets, Shield, Zap, DollarSign, CheckCircle, BarChart3, Heart, Wind } from "lucide-react";
+import { products, productsComparison } from "@/content/site";
+import { Droplets, Shield, Zap, DollarSign, CheckCircle, BarChart3, Heart, Wind, XCircle } from "lucide-react";
 
 export default function ProductsPage() {
   return (
@@ -36,6 +37,22 @@ export default function ProductsPage() {
                     <p className="text-sm font-medium text-gradient">{feature.desc}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </Reveal>
+
+          {/* 제품 이미지 */}
+          <Reveal>
+            <div className="mb-12">
+              <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-8">
+                <Image
+                  src="/products/ecosh-models.png"
+                  alt="에코쉬 무수소변기 모델 EU-01, EU-04, EU-05"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
               </div>
             </div>
           </Reveal>
@@ -130,6 +147,67 @@ export default function ProductsPage() {
             </div>
           </Reveal>
         </div>
+      </Section>
+
+      {/* 수세식 vs 에코사 무수소변기 - 항목별 비교 */}
+      <Section id="compare-vs" title={productsComparison.title}>
+        <Reveal>
+          <div className="relative max-w-5xl mx-auto">
+            {/* Headers */}
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 mb-4 items-center">
+              <div className="p-4 rounded-xl border border-white/10 bg-white/5 flex items-center justify-between">
+                <h3 className="text-base sm:text-lg font-semibold">{productsComparison.left.name}</h3>
+                <span className="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/15">수세식</span>
+              </div>
+              {/* VS center - header row */}
+              <div className="hidden lg:flex items-center justify-center">
+                <div className="size-16 rounded-full bg-gradient-to-br from-ecosa-cyan/20 to-ecosa-green/20 border border-white/20 backdrop-blur-sm flex items-center justify-center font-extrabold text-base">
+                  VS
+                </div>
+              </div>
+              <div className="p-4 rounded-xl border border-white/10 bg-gradient-to-r from-cyan-500/10 to-green-500/10 flex items-center justify-between">
+                <h3 className="text-base sm:text-lg font-semibold text-gradient">{productsComparison.right.name}</h3>
+                <span className="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/15">Waterless</span>
+              </div>
+            </div>
+
+            {/* Row-by-row comparison */}
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-stretch">
+              {/* 수세식 리스트 */}
+              <div className="rounded-2xl border border-white/10 overflow-hidden">
+                {productsComparison.left.items.map((item, i) => (
+                  <div key={i} className={`flex items-start gap-3 p-4 text-sm border-b border-white/10 ${i % 2 === 0 ? "bg-white/5" : "bg-transparent"}`}>
+                    <XCircle size={16} className="text-red-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground/80">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* VS center - between lists (non-overlapping) */}
+              <div className="hidden lg:flex items-center justify-center px-2">
+                <div className="size-16 rounded-full bg-gradient-to-br from-ecosa-cyan/20 to-ecosa-green/20 border border-white/20 backdrop-blur-sm flex items-center justify-center font-extrabold text-base">
+                  VS
+                </div>
+              </div>
+
+              {/* 에코사 무수소변기 리스트 */}
+              <div className="rounded-2xl border border-white/10 overflow-hidden">
+                {productsComparison.right.items.map((item, i) => (
+                  <div key={i} className={`flex items-start gap-3 p-4 text-sm border-b border-white/10 ${i % 2 === 0 ? "bg-white/5" : "bg-transparent"}`}>
+                    <CheckCircle size={16} className="text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground/90 font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="/products#ecosh" className="button button-primary">카탈로그 보기</a>
+              <a href="/contact?type=quote" className="button button-secondary">설치 견적 문의</a>
+            </div>
+          </div>
+        </Reveal>
       </Section>
 
       {/* 다막아 하수구트랩 */}
