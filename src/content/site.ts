@@ -641,20 +641,18 @@ export const company = {
   },
   overview: {
     name: "주식회사 에코사 (ECOSA Co., Ltd.)",
-    established: "2010년",
-    ceo: "김에코",
+    established: "2025년 5월 30일",
+    ceo: "조수현",
     business: [
       "친환경 위생기기 제조 및 판매",
       "무수소변기 시스템 개발",
       "실내 공기질 개선 솔루션",
       "하수구 악취/해충 차단 시스템"
     ],
-    headquarters: "서울특별시 강남구 테헤란로 123",
-    factory: "경기도 화성시 산업단지로 456",
+    headquarters: "경기도 수원시 장안구 이목로 17 525호, 526호",
     contact: {
-      phone: "031-297-0691",
-      fax: "031-5182-8055",
-      email: "ecoway@ecowaydu.com"
+      phone: "010-9019-3692",
+      email: "J_dream4u@naver.com"
     }
   },
   vision: "A company that protects the most precious values for the world",
@@ -664,59 +662,6 @@ export const company = {
     "건강 증진: 위생적이고 안전한 생활환경 조성",
     "경제 기여: 합리적 가격과 낮은 유지비용으로 경제적 가치 창출",
     "사회 공헌: 물 부족 지역 지원 및 친환경 교육 확대"
-  ],
-  history: {
-    "2020s": [
-      { year: 2024, event: "다막아 특허 10-2323048호 취득" },
-      { year: 2023, event: "청와대 무수소변기 설치" },
-      { year: 2022, event: "홈플러스 전국 매장 확대 적용" }
-    ],
-    "2010s": [
-      { year: 2018, event: "평창동계올림픽 공식 납품" },
-      { year: 2017, event: "남이섬 전면 도입" },
-      { year: 2015, event: "에코쉬 브랜드 런칭" },
-      { year: 2013, event: "벤처기업 인증" },
-      { year: 2010, event: "회사 설립" }
-    ]
-  },
-  organization: {
-    ceo: "대표이사 김에코",
-    divisions: [
-      {
-        name: "경영지원본부",
-        teams: ["재무회계팀", "인사총무팀", "전략기획팀"]
-      },
-      {
-        name: "기술연구소",
-        teams: ["제품개발팀", "기술혁신팀", "품질관리팀"]
-      },
-      {
-        name: "생산본부",
-        teams: ["생산관리팀", "품질보증팀", "자재구매팀"]
-      },
-      {
-        name: "영업마케팅본부",
-        teams: ["국내영업팀", "해외영업팀", "마케팅팀", "고객지원팀"]
-      }
-    ]
-  },
-  certifications: [
-    "ISO 9001:2015 품질경영시스템",
-    "ISO 14001:2015 환경경영시스템",
-    "벤처기업 인증",
-    "기업부설연구소 인정",
-    "KC 안전인증",
-    "KTL 성능인증",
-    "KOTITI 항균인증"
-  ],
-  awards: [
-    { year: 2016, award: "대한민국우수상품 대상 (한국 언론 기자 협회 중앙회)" },
-    { year: 2015, award: "제 4회 대한민국 모범기업인 대상 (국회예산정책처특별위원회)" },
-    { year: 2015, award: "성남창업경영대회 기업부문 최우수상 (성남산업진흥재단)" },
-    { year: 2015, award: "대한민국 문화 경영 대상 (헤럴드 경제)" },
-    { year: 2015, award: "표창장 (국회 환경 노동 위원회)" },
-    { year: 2015, award: "표창장 (광주광역시장)" },
-    { year: 2015, award: "물 관리 녹색 기술상 (한국 환경 산업 기술원)" }
   ]
 };
 
@@ -728,8 +673,7 @@ export const support = {
       title: "A/S 신청",
       channels: [
         { type: "온라인", info: "24시간 온라인 접수" },
-        { type: "전화", info: "031-297-0691" },
-        { type: "카카오톡", info: "@에코사" }
+        { type: "전화", info: "010-9019-3692" }
       ],
       responseTime: "평균 처리 시간: 24시간 이내"
     },
@@ -808,24 +752,16 @@ export const contact = {
   title: "Contact Us",
   headquarters: {
     title: "본사",
-    address: "서울특별시 강남구 테헤란로 123",
-    phone: "031-297-0691",
-    fax: "031-5182-8055",
-    email: "ecoway@ecowaydu.com",
+    address: "경기도 수원시 장안구 이목로 17 525호, 526호",
+    phone: "010-9019-3692",
+    email: "J_dream4u@naver.com",
     hours: "평일 09:00-18:00"
-  },
-  factory: {
-    title: "공장",
-    address: "경기도 화성시 산업단지로 456",
-    phone: "031-297-0691",
-    fax: "031-5182-8055"
   },
   customerService: {
     title: "고객센터",
-    phone: "031-297-0691",
-    kakao: "@에코사",
+    phone: "010-9019-3692",
     hours: "평일 09:00-18:00",
-    emergency: "031-297-0691 (24시간)"
+    emergency: "010-9019-3692 (24시간)"
   },
 
   partnership: {
@@ -839,10 +775,9 @@ export const contact = {
 export const footer = {
   company: {
     name: "(주)에코사",
-    ceo: "대표이사: 김에코",
-    businessNumber: "사업자등록번호: 123-45-67890",
-    ecommerceNumber: "통신판매업신고: 제2024-서울강남-1234호",
-    address: "주소: 서울특별시 강남구 테헤란로 123"
+    ceo: "대표이사: 조수현",
+    businessNumber: "사업자등록번호: 590-03-03549",
+    address: "주소: 경기도 수원시 장안구 이목로 17 525호, 526호"
   },
   quickLinks: [
     "회사소개",

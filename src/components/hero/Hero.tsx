@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { heroSlides } from "@/content/site";
+import Image from "next/image";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -229,40 +230,53 @@ export default function Hero() {
                 
                 {/* Slide-specific visuals */}
                 {slide.id === "vision" && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl font-bold text-gradient mb-4">ECOSA</div>
-                      <div className="text-sm text-foreground/60">A company that protects the most precious values</div>
+                  <div className="absolute inset-0">
+                    <Image
+                      src="/products/hero-water.jpg"
+                      alt="물방울 - 에코사 비전"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="text-6xl font-bold text-gradient mb-4">ECOSA</div>
+                        <div className="text-sm text-white/90">A company that protects the most precious values</div>
+                      </div>
                     </div>
                   </div>
                 )}
-                
+
                 {slide.id === "ecosh" && (
-                  <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <div className="text-center">
-                      <div className="text-4xl font-bold mb-4 text-cyan-400">EU-01 · EU-04/05</div>
-                      <div className="text-sm text-foreground/70">무수소변기 시리즈</div>
-                    </div>
+                  <div className="absolute inset-0">
+                    <Image
+                      src="/products/waterfreepee.png"
+                      alt="에코쉬 무수소변기"
+                      fill
+                      className="object-contain p-8"
+                    />
                   </div>
                 )}
 
                 {slide.id === "damaga" && (
-                  <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <div className="text-center">
-                      <div className="text-4xl font-bold mb-4 text-emerald-400">다막아</div>
-                      <div className="text-sm text-foreground/70 mb-2">하수구트랩</div>
-                      <div className="text-xs text-foreground/60">특허 10-2323048호</div>
-                    </div>
+                  <div className="absolute inset-0">
+                    <Image
+                      src="/products/damaka.png"
+                      alt="다막아 하수구트랩"
+                      fill
+                      className="object-contain p-8"
+                    />
                   </div>
                 )}
 
                 {slide.id === "air-dress-care" && (
-                  <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold mb-4 text-violet-400">Air Clean Care</div>
-                      <div className="text-2xl font-bold text-purple-400">Dress Care</div>
-                      <div className="text-sm text-foreground/70 mt-2">실내 공기질 & 의류 관리</div>
-                    </div>
+                  <div className="absolute inset-0">
+                    <Image
+                      src="/products/watarfreepee.png"
+                      alt="Air Clean Care & Dress Care"
+                      fill
+                      className="object-contain p-8"
+                    />
                   </div>
                 )}
               </motion.div>

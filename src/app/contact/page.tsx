@@ -2,13 +2,12 @@
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import { contact } from "@/content/site";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Building, 
-  Factory,
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Building,
   MessageCircle,
   Users,
   Award,
@@ -88,47 +87,6 @@ export default function ContactPage() {
             </div>
           </Reveal>
 
-          {/* 공장 */}
-          <Reveal delay={0.1}>
-            <div className="p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-green-500/10 to-emerald-500/10">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center">
-                  <Factory className="text-green-400" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">{contact.factory.title}</h3>
-                  <p className="text-sm text-foreground/70">생산 및 품질관리</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                  <div>
-                    <div className="font-medium">주소</div>
-                    <div className="text-sm text-foreground/70">{contact.factory.address}</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Phone className="text-green-400" size={16} />
-                  <div>
-                    <div className="font-medium">전화</div>
-                    <div className="text-sm text-foreground/70">{contact.factory.phone}</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <span className="text-green-400 text-sm font-medium">FAX</span>
-                  <div>
-                    <div className="font-medium">팩스</div>
-                    <div className="text-sm text-foreground/70">{contact.factory.fax}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
           {/* 고객센터 */}
           <Reveal delay={0.2}>
             <div className="p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-purple-500/10 to-violet-500/10">
@@ -150,15 +108,7 @@ export default function ContactPage() {
                     <div className="text-sm text-foreground/70">{contact.customerService.phone}</div>
                   </div>
                 </div>
-                
-                <div className="flex items-center gap-3">
-                  <MessageCircle className="text-purple-400" size={16} />
-                  <div>
-                    <div className="font-medium">카카오톡</div>
-                    <div className="text-sm text-foreground/70">{contact.customerService.kakao}</div>
-                  </div>
-                </div>
-                
+
                 <div className="flex items-center gap-3">
                   <Clock className="text-purple-400" size={16} />
                   <div>
@@ -405,22 +355,6 @@ export default function ContactPage() {
               <p className="text-sm text-foreground/70 mb-2">{contact.headquarters.email}</p>
               <p className="text-xs text-foreground/60">24시간 접수</p>
             </a>
-          </Reveal>
-          
-          <Reveal delay={0.2}>
-            <button 
-              onClick={() => {
-                alert('카카오톡 @에코사로 문의해주세요!');
-              }}
-              className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all block text-center w-full"
-            >
-              <div className="w-16 h-16 rounded-full bg-purple-400/20 border border-purple-400/30 mx-auto mb-4 flex items-center justify-center">
-                <MessageCircle className="text-purple-400" size={24} />
-              </div>
-              <h4 className="font-bold text-lg mb-2 group-hover:text-gradient transition-colors">카카오톡</h4>
-              <p className="text-sm text-foreground/70 mb-2">{contact.customerService.kakao}</p>
-              <p className="text-xs text-foreground/60">실시간 채팅</p>
-            </button>
           </Reveal>
         </div>
       </Section>

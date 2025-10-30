@@ -2,12 +2,11 @@
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import { support } from "@/content/site";
-import { 
-  Headphones, 
-  Download, 
-  HelpCircle, 
-  FileText, 
-  Phone, 
+import {
+  Headphones,
+  HelpCircle,
+  FileText,
+  Phone,
   MessageCircle,
   Clock
 } from "lucide-react";
@@ -140,35 +139,6 @@ export default function SupportPage() {
         </div>
       </Section>
 
-      {/* 다운로드 센터 */}
-      <Section id="downloads" title="자료실">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {support.resources.downloads.map((download, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <button 
-                onClick={() => {
-                  // 실제 다운로드 로직은 여기에 구현
-                  alert(`${download.name} 다운로드를 시작합니다.`);
-                }}
-                className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all block w-full text-left"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <Download className="text-purple-400" size={24} />
-                  <div>
-                    <h4 className="font-semibold group-hover:text-gradient transition-colors">
-                      {download.name}
-                    </h4>
-                    <span className="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">
-                      {download.format}
-                    </span>
-                  </div>
-                </div>
-                <div className="text-cyan-400 text-sm font-medium group-hover:translate-x-1 transition-transform">다운로드 →</div>
-              </button>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
     </main>
   );
 }
