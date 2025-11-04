@@ -3,14 +3,13 @@
 export const nav = [
   { href: "/brand-story", label: "Brand Story" },
   { href: "/company", label: "회사소개" },
-  { 
-    href: "/products", 
+  {
+    href: "/products",
     label: "제품소개",
     dropdown: [
       { href: "/products#ecosh", label: "에코쉬 무수소변기" },
-      { href: "/products#damaga", label: "다막아 하수구트랩" },
-      { href: "/products#air-clean", label: "Air Clean Care" },
-      { href: "/products#dress-care", label: "Dress Care" }
+      { href: "/products#toilet", label: "LS75 절수양변기" },
+      { href: "/products#neoamico", label: "NEOAMICO" }
     ]
   },
   { href: "/innovation", label: "기술혁신" },
@@ -69,36 +68,57 @@ export const heroSlides = [
     ]
   },
   {
-    id: "damaga",
-    title: "심장판막 원리로 완벽 밀폐 - 다막아",
-    subtitle: "특허 10-2323048호 | 국내 유일 일체형 실리콘 하수구트랩",
-    background: "product-damaga",
-    technology: [
-      "심장판막 원리 적용",
-      "Y형 하단부 + 회오리 유도관",
-      "100% 일체형 실리콘 재질",
-      "KTL 누설 테스트 통과"
+    id: "waterless-toilet",
+    title: "물 절약의 새로운 기준\n에코사 절수형 양변기",
+    subtitle: "3.5L 초절수 시스템으로 연간 30% 이상 물 절약",
+    background: "product-toilet",
+    features: {
+      title: "핵심 특징",
+      items: [
+        { icon: "💧", title: "3.5L 절수", desc: "초절수 시스템" },
+        { icon: "🔄", title: "이중세척", desc: "강력한 세정력" },
+        { icon: "🏥", title: "위생적", desc: "항균 코팅" },
+        { icon: "💰", title: "경제적", desc: "수도요금 절감" }
+      ]
+    },
+    highlights: [
+      "연간 30% 이상 물 절약 효과",
+      "강력한 이중세척 시스템",
+      "프리미엄 세라믹 소재"
     ],
-    demo: "드라이아이스 밀폐력 테스트 영상",
+    applications: ["가정", "사무실", "상업시설", "공공기관"],
     cta: [
-      { label: "다막아 성능 확인", href: "/products#damaga" },
-      { label: "무료 샘플 신청", href: "/contact?sample=damaga" }
+      { label: "절수형 양변기 자세히 보기", href: "/products#toilet" },
+      { label: "설치 문의하기", href: "/contact" }
     ]
   },
   {
-    id: "air-dress-care",
-    title: "Care for Indoor Air Pollution",
-    subtitle: "실내 공기 정화와 의류 케어의 새로운 기준",
-    background: "product-care",
-    functions: [
-      "CO₂ 이산화탄소 제거",
-      "황색포도상구균/대장균 항균",
-      "의류 살균 및 탈취",
-      "실내 공기질 개선"
+    id: "neoamico",
+    title: "깨끗한 실내 공기로 건강한 생활환경을 만듭니다\nNEOAMICO",
+    subtitle: "살균 + 탈취 + 제습, 3-in-1 통합 솔루션",
+    background: "product-neoamico",
+    features: {
+      title: "3 in 1 통합 솔루션",
+      items: [
+        { icon: "🦠", title: "살균", desc: "UV-C LED" },
+        { icon: "💨", title: "탈취", desc: "TiO2 광촉매" },
+        { icon: "💧", title: "제습", desc: "4000ml/일" }
+      ]
+    },
+    technologies: [
+      { name: "듀얼 팬 시스템", desc: "효율적 공기 순환" },
+      { name: "UV-C LED", desc: "강력한 살균 효과" },
+      { name: "TiO2 광촉매", desc: "지속적 탈취" },
+      { name: "저전력 100W", desc: "에너지 절약" }
     ],
-    applications: ["가정", "호텔", "의료시설", "교육기관"],
+    advantages: [
+      "공기청정기 + 살균기 + 제습기를 하나로 통합",
+      "비용 절감 및 공간 절약",
+      "편리한 관리"
+    ],
     cta: [
-      { label: "제품 카탈로그 보기", href: "/products#air-clean" }
+      { label: "NEOAMICO 자세히 보기", href: "/products#neoamico" },
+      { label: "제품 문의하기", href: "/contact" }
     ]
   }
 ];
@@ -136,17 +156,6 @@ export const coreValues = {
         "KTL 누설 테스트 인증",
         "디자인 등록증"
       ]
-    },
-    {
-      id: "cost-efficiency",
-      icon: "💰",
-      title: "Cost Efficiency - 경제성",
-      headline: "초기 투자 대비 2년 내 투자비 회수",
-      calculator: {
-        inputs: ["설치 대수", "예상 절수량"],
-        outputs: ["연간 절감 비용"]
-      },
-      comparison: "일반 소변기 vs 에코쉬 TCO 비교"
     }
   ]
 };
@@ -172,20 +181,6 @@ export const products = {
         applications: ["소규모 화장실", "이동식 화장실"],
         price: "별도 문의"
     },
-    {
-      model: "EU-04/05",
-        type: "스탠드형/벽부형",
-        specs: {
-          dimensions: "390mm × 1095mm(스탠드) / 983mm(벽부형) × 420mm",
-          weight: "3.05kg(스탠드) / 3kg(벽부형)",
-        material: "ABS",
-          colors: ["White", "Gold"],
-          drainage: "50mm"
-        },
-        features: ["대용량 사용 환경 최적화"],
-        applications: ["대형 건물", "공공시설", "상업시설"],
-        price: "별도 문의"
-      }
     ],
     coreTechnology: [
       {
@@ -236,75 +231,57 @@ export const products = {
       payback: "약 1.5년"
     }
   },
-  damaga: {
-    title: "다막아 하수구트랩",
-    description: "심장판막 원리를 적용한 국내 유일 일체형 실리콘 하수구트랩",
-    patent: "10-2323048호",
-    coreTechnology: [
-      {
-        name: "심장판막 원리",
-        description: "인체 심장의 판막 구조 응용",
-        benefits: ["물의 장력만으로 개폐", "역류 완벽 차단", "특허 10-2323048호"]
-      },
-      {
-        name: "일체형 실리콘 구조",
-        description: "국내 유일 100% 일체형",
-        benefits: ["유격(틈) 제로 설계", "변형/파손 없는 내구성", "끓는 물에도 변형 없음"]
-      },
-      {
-        name: "Y형 배수 시스템",
-        description: "Y형 하단부 설계",
-        benefits: ["회오리 유도관 적용", "강력한 배수력", "물고임 현상 제거"]
-      }
-    ],
+  waterSavingToilet: {
+    title: "LS75 절수양변기",
+    description: "3.5L 진공/압력 플러싱 시스템으로 강력한 세정력과 절수 효과를 동시에",
+    model: "LS75",
     specs: {
-      material: "ABS + 실리콘 일체형",
-      size: "범용 (모든 배수구 호환)",
-      colors: ["투명", "화이트"],
-      heatResistance: "100°C",
-      lifespan: "반영구적",
-      certifications: ["KTL", "KOTITI"]
+      dimensions: "700mm × 400mm × 710mm",
+      flushVolume: "3.5L",
+      flushType: "진공/압력 플러싱",
+      material: "세라믹"
     },
-    comparison: {
-      headers: ["항목", "다막아", "A사", "B사", "C사"],
-      rows: [
-        ["제조국", "한국", "한국", "중국", "중국"],
-        ["재질", "ABS+실리콘", "플라스틱", "실리콘+스테인리스", "PPS"],
-        ["구조", "일체형", "분리형", "분리형", "분리형"],
-        ["밀폐력", "완벽(유격 없음)", "보통", "약함", "약함"],
-        ["배수력", "강력(Y형)", "느림(일자형)", "느림(일자형)", "매우 느림"],
-        ["내구성", "반영구적", "1-2년", "6개월", "6개월"],
-        ["가격", "중", "저", "고", "저"],
-        ["A/S", "국내 즉시", "국내", "불가", "불가"]
-      ]
-    },
-    installation: [
-      "기존 배수구 덮개 제거",
-      "배수구 청소 및 건조",
-      "다막아 규격 확인",
-      "제품 삽입 및 고정",
-      "물 테스트 실시",
-      "밀폐 상태 확인"
+    features: [
+      "3.5L 초절수 시스템으로 일반 양변기 대비 30% 이상 물 절약",
+      "진공/압력 플러싱 방식으로 강력한 세정력 보장",
+      "컴팩트한 디자인으로 공간 활용도 극대화",
+      "친환경 세라믹 소재로 위생적이고 내구성 우수"
+    ],
+    benefits: [
+      "연간 수도요금 30% 이상 절감",
+      "강력한 세정력으로 청소 주기 연장",
+      "친환경 절수로 환경 보호 기여",
+      "프리미엄 디자인으로 공간 품격 향상"
+    ]
+  },
+  neoamico: {
+    title: "NEOAMICO",
+    description: "Air Clean Care Solution - 실내 공기 살균, 탈취, 제습을 한번에",
+    concept: "Air Clean Care & Dress Care 통합 솔루션",
+    coreFunctions: [
+      "살균 (Sterilization): UV-C LED 기술로 강력한 살균 효과",
+      "탈취 (Deodorization): TiO2 광촉매로 악취 분자 분해",
+      "제습 (Dehumidification): 하루 최대 4,000ml 제습 능력"
     ],
     applications: {
-      residential: ["욕실", "주방", "베란다"],
-      commercial: ["음식점", "카페", "병원"],
-      public: ["학교", "관공서", "지하철"],
-      special: ["식품공장", "연구소"]
+      airCleanCare: [
+        "실내 공기 오염물질 제거",
+        "휘발성유기화합물(VOCs) 분해",
+        "미세먼지 필터링",
+        "음이온 발생으로 공기 질 개선"
+      ],
+      dressCare: [
+        "의류 살균 및 탈취",
+        "섬유 보호 케어",
+        "옷장/드레스룸 위생 관리",
+        "진드기 및 세균 제거"
+      ]
     },
-    casestudies: [
-      {
-        title: "30년 된 아파트 하수구 악취",
-        problem: "여름철 심한 악취와 나방파리",
-        solution: "다막아 설치 후 100% 차단",
-        testimonial: "20년 고민이 하루에 해결됐어요"
-      },
-      {
-        title: "음식점 주방 배수구",
-        problem: "바퀴벌레 출몰과 역류",
-        solution: "전 배수구 다막아 설치",
-        testimonial: "위생 점검 만점 받았습니다"
-      }
+    technology: [
+      "듀얼 팬 시스템으로 효율적인 공기 순환",
+      "UV-C LED 살균 기술",
+      "TiO2 광촉매 탈취 시스템",
+      "저전력 100W 에너지 절약 설계"
     ]
   },
   airCleanCare: {
@@ -627,7 +604,7 @@ export const innovation = {
 export const company = {
   ceoMessage: {
     title: "자연과 사람의 조화로운 공존을 꿈꿉니다",
-    content: `안녕하십니까, 에코사 대표이사입니다.
+    content: `안녕하십니까, 에코사 대표입니다.
 
 에코사는 'A company that protects the most precious values for the world'라는 비전 아래, 지구상에서 가장 소중한 자원인 물을 보호하고, 인류의 건강한 삶을 지키기 위해 끊임없이 혁신하고 있습니다.
 
@@ -655,7 +632,7 @@ export const company = {
       email: "J_dream4u@naver.com"
     }
   },
-  vision: "A company that protects the most precious values for the world",
+  vision: "Water is Life, Innovation is Future",
   mission: [
     "자원 보호: 물과 에너지를 절약하는 혁신적 기술 개발",
     "환경 보전: CO2 감소와 화학물질 사용 최소화",
@@ -775,7 +752,7 @@ export const contact = {
 export const footer = {
   company: {
     name: "(주)에코사",
-    ceo: "대표이사: 조수현",
+    ceo: "대표: 조수현",
     businessNumber: "사업자등록번호: 590-03-03549",
     address: "주소: 경기도 수원시 장안구 이목로 17 525호, 526호"
   },
@@ -797,24 +774,62 @@ export const cta = {
     {
       title: "무료 상담 신청",
       description: "전문 컨설턴트가 맞춤 솔루션을 제안합니다",
-      href: "/contact?type=consultation"
+      href: "/contact?type=consultation",
+      type: "link"
     },
     {
       title: "견적 요청",
       description: "설치 규모에 따른 정확한 견적을 받아보세요",
-      href: "/contact?type=quote"
+      href: "/contact?type=quote",
+      type: "link"
     },
     {
       title: "카탈로그 다운로드",
       description: "상세 제품 사양서를 확인하세요",
-      href: "/support#downloads"
+      href: "ecosa-catalog-2025.pdf",
+      type: "download"
     },
     {
-      title: "샘플 신청",
-      description: "다막아 무료 샘플을 체험해보세요",
-      href: "/contact?type=sample"
+      title: "무료 샘플 신청",
+      description: "매직밸브 샘플을 직접 체험해보세요",
+      href: "/contact?type=sample",
+      type: "link"
     }
   ]
+};
+
+// Catalog Downloads
+export const catalogs = {
+  main: {
+    title: "에코사 종합 카탈로그 (한글)",
+    description: "에코사의 모든 제품을 한눈에 확인하세요",
+    fileName: "ecosa-catalog-2025.pdf",
+    fileSize: "3.0MB"
+  },
+  mainEn: {
+    title: "ECOSA Catalog (English)",
+    description: "Complete product overview in English",
+    fileName: "ecosa-catalog-en-2025.pdf",
+    fileSize: "91MB"
+  },
+  ecosh: {
+    title: "에코쉬 무수소변기 상세 정보",
+    description: "4 ZERO 기술의 모든 것 (종합 카탈로그 포함)",
+    fileName: "ecosa-catalog-2025.pdf",
+    fileSize: "3.0MB"
+  },
+  toilet: {
+    title: "절수형 양변기 상세 정보",
+    description: "3.5L 초절수 시스템 (종합 카탈로그 포함)",
+    fileName: "ecosa-catalog-2025.pdf",
+    fileSize: "3.0MB"
+  },
+  neoamico: {
+    title: "NEOAMICO 상세 정보",
+    description: "3-in-1 Air Clean Care Solution (종합 카탈로그 포함)",
+    fileName: "ecosa-catalog-2025.pdf",
+    fileSize: "3.0MB"
+  }
 };
 
 // Flush vs Waterless (항목별 VS 비교)

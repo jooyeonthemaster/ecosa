@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /B \"c:\\Users\\jooye\\Desktop\\free\\ecosa4u\\public\")",
+      "Bash(find:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nUpdate: 실제 회사 데이터로 전면 업데이트\n\n- 회사 정보 업데이트 (대표: 조수현, 사업자등록번호: 590-03-03549)\n- 주소: 경기도 수원시 장안구 이목로 17 525호, 526호\n- 연락처: 010-9019-3692, 이메일: J_dream4u@naver.com\n- 공장 주소, 팩스, 카카오톡, 통신판매업 정보 제거\n- 연혁, 조직도, 인증현황, 수상내역 섹션 제거\n- CEO 메시지 그리드 3칼럼 → 2칼럼 변경\n- 히어로 섹션에 실제 제품 이미지 적용\n- 푸터 재구성 (회사정보, 연락처, 바로가기)\n- 고객지원 페이지 자료실 섹션 제거\n\n🤖 Generated with Claude Code\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(vercel --prod:*)",
+      "Bash(if not exist \"claudedocs\" mkdir claudedocs)",
+      "Bash(dir:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(if not exist \"c:\\Users\\jooye\\Desktop\\free\\ecosa4u\\public\\catalogs\" mkdir \"c:\\Users\\jooye\\Desktop\\free\\ecosa4u\\public\\catalogs\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

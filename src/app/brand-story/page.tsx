@@ -18,13 +18,13 @@ export default function BrandStoryPage() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-blue-900/10 to-transparent" />
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-100/20 via-emerald-100/10 to-transparent" />
         
         {/* Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-200/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
 
         <div className="relative z-10 text-center px-6">
@@ -36,7 +36,7 @@ export default function BrandStoryPage() {
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
               에코웨이의 모든 생각과 기술은 인간과 자연을 먼저 생각합니다
             </p>
           </Reveal>
@@ -44,7 +44,7 @@ export default function BrandStoryPage() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronRight className="rotate-90 text-white/50" size={32} />
+          <ChevronRight className="rotate-90 text-gray-400" size={32} />
         </div>
       </section>
 
@@ -59,31 +59,31 @@ export default function BrandStoryPage() {
                 필요합니다
               </div>
               
-              <div className="space-y-6">
-                <div className="p-6 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20">
+                <div className="space-y-6">
+                <div className="p-6 rounded-2xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 shadow-md">
                   <h3 className="text-xl font-bold mb-3 flex items-center gap-3">
-                    <Droplets className="text-cyan-400" />
+                    <Droplets className="text-green-600" />
                     개인 평균 1일 90L 물 사용
                   </h3>
                   <div className="flex items-center gap-4">
-                    <div className="text-3xl font-bold text-cyan-400">6L</div>
-                    <div className="text-sm text-foreground/70">(양변기)</div>
+                    <div className="text-3xl font-bold text-green-600">6L</div>
+                    <div className="text-sm text-gray-600">(양변기)</div>
                     <div className="text-lg">+</div>
-                    <div className="text-3xl font-bold text-blue-400">2L</div>
-                    <div className="text-sm text-foreground/70">(소변기)</div>
+                    <div className="text-3xl font-bold text-emerald-600">2L</div>
+                    <div className="text-sm text-gray-600">(소변기)</div>
                   </div>
-                  <p className="text-sm text-foreground/70 mt-3">
+                  <p className="text-sm text-gray-600 mt-3">
                     1회 물 소비량 (절수형 변기 기준)
                   </p>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20">
+                <div className="p-6 rounded-2xl bg-gradient-to-r from-emerald-50 to-green-50 border border-green-200 shadow-md">
                   <h3 className="text-xl font-bold mb-3 flex items-center gap-3">
-                    <TrendingUp className="text-green-400" />
+                    <TrendingUp className="text-green-600" />
                     1년 1인 평균 변기 물 사용량
                   </h3>
-                  <div className="text-3xl font-bold text-green-400">30L</div>
-                  <p className="text-sm text-foreground/70 mt-2">
+                  <div className="text-3xl font-bold text-green-600">30L</div>
+                  <p className="text-sm text-gray-600 mt-2">
                     1회 양변기 + (6회 소변기 × 2회) = 6L + 24L
                   </p>
                 </div>
@@ -94,35 +94,35 @@ export default function BrandStoryPage() {
           <Reveal delay={0.2}>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 blur-3xl" />
-              <div className="relative p-8 rounded-3xl border border-white/10 bg-black/50 backdrop-blur">
+              <div className="relative p-8 rounded-3xl border border-gray-200 bg-white shadow-xl">
                 <h3 className="text-2xl font-bold mb-6 text-center">2025년 전세계 50% 물부족</h3>
                 
                 {/* Population Visualization */}
                 <div className="space-y-8">
                   <div>
-                    <div className="text-sm text-foreground/70 mb-3">2000년도 - 8% 물부족</div>
+                    <div className="text-sm text-gray-600 mb-3">2000년도 - 8% 물부족</div>
                     <div className="flex gap-1">
                       {[...Array(10)].map((_, i) => (
-                        <div key={i} className={`w-8 h-12 rounded ${i === 0 ? 'bg-red-500' : 'bg-cyan-400/30'}`} />
+                        <div key={i} className={`w-8 h-12 rounded ${i === 0 ? 'bg-red-500' : 'bg-green-200'}`} />
                       ))}
                     </div>
                   </div>
                   
                   <div>
-                    <div className="text-sm text-foreground/70 mb-3">2025년도 - 50% 물부족</div>
+                    <div className="text-sm text-gray-600 mb-3">2025년도 - 50% 물부족</div>
                     <div className="flex gap-1">
                       {[...Array(10)].map((_, i) => (
-                        <div key={i} className={`w-8 h-12 rounded ${i < 5 ? 'bg-red-500' : 'bg-cyan-400/30'}`} />
+                        <div key={i} className={`w-8 h-12 rounded ${i < 5 ? 'bg-red-500' : 'bg-green-200'}`} />
                       ))}
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 p-4 rounded-xl bg-yellow-500/10 border border-yellow-500/20">
-                  <p className="text-center font-medium">
+                <div className="mt-8 p-4 rounded-xl bg-yellow-50 border border-yellow-200">
+                  <p className="text-center font-medium text-gray-700">
                     수질오염과 무분별한 물 사용으로
                     <br />
-                    <span className="text-yellow-400 font-bold">2025년 전세계 50% 수인성 질병 노출</span>
+                    <span className="text-yellow-700 font-bold">2025년 전세계 50% 수인성 질병 노출</span>
                   </p>
                 </div>
               </div>
@@ -136,9 +136,9 @@ export default function BrandStoryPage() {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* 사회적 문제 */}
           <Reveal>
-            <div className="h-full p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-purple-500/10 to-violet-500/10">
-              <div className="w-16 h-16 rounded-full bg-purple-400/20 border border-purple-400/30 mb-6 flex items-center justify-center">
-                <Users className="text-purple-400" size={24} />
+            <div className="h-full p-8 rounded-2xl border border-gray-200 bg-white shadow-md">
+              <div className="w-16 h-16 rounded-full bg-green-100 border border-green-200 mb-6 flex items-center justify-center">
+                <Users className="text-green-600" size={24} />
               </div>
               <h3 className="text-2xl font-bold mb-4">사회적 문제</h3>
               <div className="space-y-4">
@@ -169,9 +169,9 @@ export default function BrandStoryPage() {
 
           {/* 기술적 대안 */}
           <Reveal delay={0.1}>
-            <div className="h-full p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10">
-              <div className="w-16 h-16 rounded-full bg-cyan-400/20 border border-cyan-400/30 mb-6 flex items-center justify-center">
-                <Zap className="text-cyan-400" size={24} />
+            <div className="h-full p-8 rounded-2xl border border-gray-200 bg-white shadow-md">
+              <div className="w-16 h-16 rounded-full bg-green-100 border border-green-200 mb-6 flex items-center justify-center">
+                <Zap className="text-green-600" size={24} />
               </div>
               <h3 className="text-2xl font-bold mb-4">기술적 대안</h3>
               <div className="space-y-4">
@@ -202,9 +202,9 @@ export default function BrandStoryPage() {
 
           {/* 개발 배경 */}
           <Reveal delay={0.2}>
-            <div className="h-full p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-green-500/10 to-emerald-500/10">
-              <div className="w-16 h-16 rounded-full bg-green-400/20 border border-green-400/30 mb-6 flex items-center justify-center">
-                <Leaf className="text-green-400" size={24} />
+            <div className="h-full p-8 rounded-2xl border border-gray-200 bg-white shadow-md">
+              <div className="w-16 h-16 rounded-full bg-green-100 border border-green-200 mb-6 flex items-center justify-center">
+                <Leaf className="text-green-600" size={24} />
               </div>
               <h3 className="text-2xl font-bold mb-4">개발 배경</h3>
               <div className="space-y-4">
@@ -252,17 +252,17 @@ export default function BrandStoryPage() {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 rounded-xl bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20">
+                  <div className="p-4 rounded-xl bg-red-50 border border-red-200">
                     <h4 className="font-bold mb-2">교체주기: 1년</h4>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-sm text-gray-600">
                       물청소, 전용 세정제 사용가능<br />
                       소변 배출 후 밸브 자동 폐쇄
                     </p>
                   </div>
                   
-                  <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20">
-                    <h4 className="font-bold mb-2 text-cyan-400">정맥판막의 원리 적용</h4>
-                    <p className="text-sm text-foreground/70">
+                  <div className="p-4 rounded-xl bg-green-50 border border-green-200">
+                    <h4 className="font-bold mb-2 text-green-600">정맥판막의 원리 적용</h4>
+                    <p className="text-sm text-gray-600">
                       정맥의 내벽에 있는 혈액의 역류를 막는 역할을 하는 반달 모양의 판막.
                       혈액을 한방향으로만 흐르게 함.
                     </p>

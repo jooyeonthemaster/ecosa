@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9fa"/>
+
+  <!-- Header Section -->
+  <rect x="0" y="0" width="1920" height="160" fill="#1a73e8"/>
+  <text x="960" y="80" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">
+    NEOAMICO
+  </text>
+  <text x="960" y="125" font-family="Arial, sans-serif" font-size="28" fill="#e3f2fd" text-anchor="middle">
+    Air Clean Care Solution
+  </text>
+
+  <!-- Main Content Container -->
+  <rect x="80" y="200" width="1760" height="820" fill="white" rx="20" stroke="#e0e0e0" stroke-width="2"/>
+
+  <!-- Product Concept Section -->
+  <text x="960" y="270" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#212121" text-anchor="middle">
+    제품 컨셉
+  </text>
+  <text x="960" y="315" font-family="Arial, sans-serif" font-size="24" fill="#5f6368" text-anchor="middle">
+    "깨끗한 실내 공기로 건강한 생활환경을 만듭니다"
+  </text>
+
+  <!-- 3-in-1 Feature Section -->
+  <rect x="120" y="360" width="1680" height="280" fill="#f1f3f4" rx="15"/>
+  <text x="960" y="410" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#1a73e8" text-anchor="middle">
+    3 in 1 통합 솔루션
+  </text>
+
+  <!-- Feature 1: Sterilization -->
+  <circle cx="380" cy="530" r="60" fill="#34a853" opacity="0.1"/>
+  <text x="380" y="520" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">🦠</text>
+  <text x="380" y="580" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#212121" text-anchor="middle">
+    살균
+  </text>
+  <text x="380" y="610" font-family="Arial, sans-serif" font-size="18" fill="#5f6368" text-anchor="middle">
+    UV-C LED
+  </text>
+
+  <!-- Feature 2: Deodorization -->
+  <circle cx="960" cy="530" r="60" fill="#4285f4" opacity="0.1"/>
+  <text x="960" y="520" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">💨</text>
+  <text x="960" y="580" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#212121" text-anchor="middle">
+    탈취
+  </text>
+  <text x="960" y="610" font-family="Arial, sans-serif" font-size="18" fill="#5f6368" text-anchor="middle">
+    TiO2 광촉매
+  </text>
+
+  <!-- Feature 3: Dehumidification -->
+  <circle cx="1540" cy="530" r="60" fill="#fbbc04" opacity="0.1"/>
+  <text x="1540" y="520" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">💧</text>
+  <text x="1540" y="580" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#212121" text-anchor="middle">
+    제습
+  </text>
+  <text x="1540" y="610" font-family="Arial, sans-serif" font-size="18" fill="#5f6368" text-anchor="middle">
+    4000ml/일
+  </text>
+
+  <!-- Technical Specifications Section -->
+  <text x="960" y="700" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#212121" text-anchor="middle">
+    핵심 기술 사양
+  </text>
+
+  <!-- Spec Grid -->
+  <g>
+    <!-- Dual Fan System -->
+    <rect x="180" y="730" width="360" height="100" fill="#e8f5e9" rx="10"/>
+    <text x="360" y="770" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1b5e20" text-anchor="middle">
+      듀얼 팬 시스템
+    </text>
+    <text x="360" y="805" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32" text-anchor="middle">
+      효율적 공기 순환
+    </text>
+
+    <!-- UV-C LED -->
+    <rect x="580" y="730" width="360" height="100" fill="#e3f2fd" rx="10"/>
+    <text x="760" y="770" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0d47a1" text-anchor="middle">
+      UV-C LED
+    </text>
+    <text x="760" y="805" font-family="Arial, sans-serif" font-size="16" fill="#1565c0" text-anchor="middle">
+      강력한 살균 효과
+    </text>
+
+    <!-- TiO2 Photocatalyst -->
+    <rect x="980" y="730" width="360" height="100" fill="#fff3e0" rx="10"/>
+    <text x="1160" y="770" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e65100" text-anchor="middle">
+      TiO2 광촉매
+    </text>
+    <text x="1160" y="805" font-family="Arial, sans-serif" font-size="16" fill="#ef6c00" text-anchor="middle">
+      지속적 탈취
+    </text>
+
+    <!-- Low Power -->
+    <rect x="1380" y="730" width="360" height="100" fill="#f3e5f5" rx="10"/>
+    <text x="1560" y="770" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4a148c" text-anchor="middle">
+      저전력 100W
+    </text>
+    <text x="1560" y="805" font-family="Arial, sans-serif" font-size="16" fill="#6a1b9a" text-anchor="middle">
+      에너지 절약
+    </text>
+  </g>
+
+  <!-- Competitive Advantage Section -->
+  <rect x="180" y="860" width="1560" height="120" fill="#1a73e8" rx="10"/>
+  <text x="960" y="905" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">
+    경쟁 우위
+  </text>
+  <text x="960" y="945" font-family="Arial, sans-serif" font-size="20" fill="#e3f2fd" text-anchor="middle">
+    공기청정기 + 살균기 + 제습기를 하나로 통합한 올인원 솔루션
+  </text>
+  <text x="960" y="975" font-family="Arial, sans-serif" font-size="18" fill="#e3f2fd" text-anchor="middle">
+    비용 절감 | 공간 절약 | 편리한 관리
+  </text>
+</svg>

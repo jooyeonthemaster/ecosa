@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import { company } from "@/content/site";
@@ -20,11 +21,11 @@ export default function CompanyPage() {
       <Section 
         title="회사소개" 
         subtitle="지구의 가장 소중한 가치를 지키는 기업, 에코사"
+        variant="hero"
       >
         <Reveal>
           <div className="text-center">
-            <div className="text-4xl font-bold text-gradient mb-4">{company.vision}</div>
-            <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               세계에서 가장 소중한 가치를 지키는 기업으로서, 물과 환경을 보호하며 
               지속가능한 미래를 만들어가는 에코사입니다.
             </p>
@@ -37,13 +38,21 @@ export default function CompanyPage() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <Reveal>
             <div>
-              <div className="aspect-[3/4] rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-8 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-cyan-400/20 to-blue-400/20 border border-white/20 mx-auto mb-4 flex items-center justify-center">
-                    <Users size={32} className="text-cyan-400" />
+              <div className="aspect-[3/4] rounded-2xl border border-gray-200 overflow-hidden bg-gradient-to-br from-green-50 to-emerald-50 shadow-lg">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/products/president.png"
+                    alt="에코사 대표 조수현"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6">
+                    <div className="text-white">
+                      <div className="font-bold text-xl mb-1">대표</div>
+                      <div className="text-white/90 text-lg">{company.overview.ceo}</div>
+                    </div>
                   </div>
-                  <div className="font-bold text-xl mb-2">대표이사</div>
-                  <div className="text-foreground/70">{company.overview.ceo}</div>
                 </div>
               </div>
             </div>
@@ -53,7 +62,7 @@ export default function CompanyPage() {
             <div>
               <div className="prose prose-invert max-w-none">
                 {company.ceoMessage.content.split('\n\n').map((paragraph, i) => (
-                  <p key={i} className="text-foreground/80 leading-relaxed mb-4">
+                  <p key={i} className="text-gray-700 leading-relaxed mb-4">
                     {paragraph}
                   </p>
                 ))}
@@ -68,28 +77,28 @@ export default function CompanyPage() {
         <div className="grid lg:grid-cols-2 gap-12">
           <Reveal>
             <div className="space-y-8">
-              <div className="p-6 rounded-xl border border-white/10 bg-white/5">
+              <div className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
-                  <Building className="text-cyan-400" />
+                  <Building className="text-green-600" />
                   기업 정보
                 </h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-foreground/70">회사명:</span>
+                    <span className="text-gray-600">회사명:</span>
                     <span className="font-medium">{company.overview.name}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-foreground/70">설립일:</span>
+                    <span className="text-gray-600">설립일:</span>
                     <span className="font-medium">{company.overview.established}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-foreground/70">대표이사:</span>
+                    <span className="text-gray-600">대표:</span>
                     <span className="font-medium">{company.overview.ceo}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl border border-white/10 bg-white/5">
+              <div className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
                   <Target className="text-green-400" />
                   사업 분야
@@ -108,7 +117,7 @@ export default function CompanyPage() {
 
           <Reveal delay={0.2}>
             <div className="space-y-8">
-              <div className="p-6 rounded-xl border border-white/10 bg-white/5">
+              <div className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
                   <MapPin className="text-purple-400" />
                   위치 정보
@@ -116,12 +125,12 @@ export default function CompanyPage() {
                 <div className="space-y-4 text-sm">
                   <div>
                     <div className="font-medium mb-1">본사</div>
-                    <div className="text-foreground/70">{company.overview.headquarters}</div>
+                    <div className="text-gray-600">{company.overview.headquarters}</div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl border border-white/10 bg-white/5">
+              <div className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
                   <Phone className="text-orange-400" />
                   연락처
@@ -146,13 +155,14 @@ export default function CompanyPage() {
       <Section id="vision-mission" title="비전 & 미션">
         <div className="space-y-12">
           <Reveal>
-            <div className="text-center p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10">
+            <div className="text-center p-8 rounded-2xl border border-gray-200 bg-gradient-to-br from-cyan-500/10 to-blue-500/10">
               <h3 className="text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                <Globe className="text-cyan-400" />
+                <Globe className="text-green-600" />
                 Vision
               </h3>
               <p className="text-3xl font-bold text-gradient mb-4">{company.vision}</p>
-              <p className="text-lg text-foreground/80">세계에서 가장 소중한 가치를 지키는 기업</p>
+              <p className="text-lg text-gray-700">물은 생명, 혁신은 미래</p>
+              <p className="text-sm text-gray-600 mt-3">생명의 근원인 물을 지키고, 혁신 기술로 지속가능한 미래를 만듭니다</p>
             </div>
           </Reveal>
 
@@ -169,7 +179,7 @@ export default function CompanyPage() {
                   const Icon = icons[i % icons.length];
                   
                   return (
-                    <div key={i} className="p-6 rounded-xl border border-white/10 bg-white/5">
+                    <div key={i} className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm">
                       <Icon className={`${colors[i % colors.length]} mb-3`} size={24} />
                       <p className="text-sm leading-relaxed">{mission}</p>
                     </div>
