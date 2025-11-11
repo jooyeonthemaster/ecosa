@@ -51,15 +51,10 @@ export default function CasesPage() {
                 {category.cases.slice(0, 6).map((case_, j) => (
                   <Reveal key={j} delay={j * 0.1}>
                     <div className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm hover:bg-white/10 transition-all group">
-                      <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-start mb-4">
                         <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
                           {icons[key as keyof typeof icons]}
                         </div>
-                        {('year' in case_ && case_.year) ? (
-                          <span className="text-xs bg-blue-500/20 text-blue-600 px-2 py-1 rounded-full">
-                            {(case_ as any).year}
-                          </span>
-                        ) : null}
                       </div>
                       
                       <h3 className="font-bold text-lg mb-2 group-hover:text-gradient transition-colors">

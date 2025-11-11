@@ -351,13 +351,9 @@ export default function Home() {
                         {case_.name}
                       </h4>
                       <p className="text-sm text-gray-600 mb-4">{case_.description}</p>
-                      
-                      {('year' in case_ && case_.year) ? (
+
+                      {(('quantity' in case_ && case_.quantity) || ('savings' in case_ && case_.savings)) ? (
                         <div className="space-y-2 text-xs">
-                          <div className="flex justify-between">
-                            <span>설치년도:</span>
-                            <span className="font-medium">{(case_ as any).year}</span>
-                          </div>
                           {('quantity' in case_ && case_.quantity) ? (
                             <div className="flex justify-between">
                               <span>설치대수:</span>
